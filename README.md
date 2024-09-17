@@ -1,4 +1,4 @@
-# SE101-F2024-Triangles
+# SE 101 Labs
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://git.uwaterloo.ca/se-101-fall2024/se101-f2024-triangles.git
+git remote add origin https://git.uwaterloo.ca/b3ruan/se-101-labs.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://git.uwaterloo.ca/se-101-fall2024/se101-f2024-triangles/-/settings/integrations)
+- [ ] [Set up project integrations](https://git.uwaterloo.ca/b3ruan/se-101-labs/-/settings/integrations)
 
 ## Collaborate with your team
 
