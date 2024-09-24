@@ -1,0 +1,14 @@
+Define the requirements needed by the program triangle.c
+for each requirement, there should be a test case
+Explain what the program should be doing, i.e. inputs and outputs of the program
+
+
+
+Fix the program triangle.c for any issues that can be found
+
+
+
+- slope of line
+- three on one point
+- isosceles triangle
+- equilateral triangle

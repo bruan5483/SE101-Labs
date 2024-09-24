@@ -69,6 +69,13 @@ float triangleArea(const float s1, const float s2, const float s3) {
   return area;
 }
 
+float slopeLine(const float x1, const float y1,
+                const float x2, const float y2) {
+  float slope = (y2-y1)/(x2-x1);
+  return slope;
+
+}
+
 /*******************************************************************************/
 /*                                                                             */
 /* main()                                                                      */
