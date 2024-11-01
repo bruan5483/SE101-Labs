@@ -16,7 +16,7 @@
 
 #include <stdio.h>                    /* printf */
 #include <math.h>                     /* sqrt   */
-#include <stdlib.h>                   /* atoi   */
+#include <stdlib.h>                   /* atof   */
 #include <ctype.h>                    /* isdigit */
 
 #define EXPECTED_ARG_COUNT 7          /* 6 plus the program name */
@@ -31,7 +31,9 @@ void outputMessage(const float x1, const float y1,
                    const float x3, const float y3,
                    const float area) {
 
-  printf("The area of the triangle formed by points (%f,%f), (%f,%f), and (%f,%f) is: %f\n",
+  // Limit the number of decimal places in area to 3 to avoid rounding error with floating point numbers
+  // i.e. area of (3,0), (0,1), (2,4) is 5.500 rather than 5.499999
+  printf("The area of the triangle formed by points (%.3f,%.3f), (%.3f,%.3f), and (%.3f,%.3f) is: %.3f\n",
 	 x1, y1,
 	 x2, y2,
 	 x3, y3,
@@ -70,18 +72,25 @@ float triangleArea(const float s1, const float s2, const float s3) {
   return area;
 }
 
-// Function to check if a string is a valid integer
-int isValidInt(const char* str) {
+// Function to check if a string is a valid integer or floating point number
+int isValidNumber(const char* str) {
+    int hasDecimalPoint = 0;
     int hasDigits = 0;
 
-    // If there is a negative sign at the start
+    // Check for negative sign at the start of a number
     if (*str == '-') {
         str++;
     }
 
     // Check each character in the string
     while (*str) {
-        if (!isdigit(*str)) {
+        if (*str == '.') {
+            if (hasDecimalPoint) {
+                // Multiple decimal points are invalid
+                return 0;
+            }
+            hasDecimalPoint = 1;
+        } else if (!isdigit(*str)) {
             // If it's not a digit, it's invalid
             return 0;
         } else {
@@ -107,10 +116,10 @@ int main(const int argc, const char* const argv[]) {
     return 0;
   }
 
-  // Check that each argument is a valid integer
+  // Check that each argument is a valid integer or floating point number
     for (int i = 1; i <= 6; i++) {
-        if (!isValidInt(argv[i])) {
-            printf("Argument %d is not a valid integer\n", i);
+        if (!isValidNumber(argv[i])) {
+            printf("Argument %d is not a valid integer or float\n", i);
             return 0;
         }
     }
@@ -126,12 +135,13 @@ int main(const int argc, const char* const argv[]) {
   float y3;
  
   /* Process inputs */
-  x1 = atoi(argv[1]);
-  y1 = atoi(argv[2]);
-  x2 = atoi(argv[3]);
-  y2 = atoi(argv[4]);
-  x3 = atoi(argv[5]);
-  y3 = atoi(argv[6]);
+  // Changed from atoi to atof to allow for floating point numbers
+  x1 = atof(argv[1]);
+  y1 = atof(argv[2]);
+  x2 = atof(argv[3]);
+  y2 = atof(argv[4]);
+  x3 = atof(argv[5]);
+  y3 = atof(argv[6]);
 
   /* Compute lengths s1, s2, and s3 */
   float s12 = distance(x1,y1,x2,y2);

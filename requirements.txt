@@ -9,6 +9,9 @@ Requirements for the triangle program:
 4. If the user provides more than six arguments, the program exits with an
    error message indicating that 6 arguments are required and outputs the 
    number of arguments received.
-5. If the user provides a non-integer argument, the program exits with an 
-   error message indicating that integer inputs are required, and outputs 
-   the position of the first non-integer argument.
+5. If the user provides a non-integer, non-floating point number argument,  
+   the program exits with an error message indicating that integer or float 
+   inputs are required, and outputs the position of the first invalid argument.
+6. The user can provide the coordinates with floating point numbers and the 
+   program will output the area of the triangle with a precision of three 
+   decimal places to avoid floating point number rounding errors.
