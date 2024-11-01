@@ -17,6 +17,7 @@
 #include <stdio.h>                    /* printf */
 #include <math.h>                     /* sqrt   */
 #include <stdlib.h>                   /* atoi   */
+#include <ctype.h>                    /* isdigit */
 
 #define EXPECTED_ARG_COUNT 7          /* 6 plus the program name */
 
@@ -69,11 +70,28 @@ float triangleArea(const float s1, const float s2, const float s3) {
   return area;
 }
 
-float slopeLine(const float x1, const float y1,
-                const float x2, const float y2) {
-  float slope = (y2-y1)/(x2-x1);
-  return slope;
+// Function to check if a string is a valid integer
+int isValidInt(const char* str) {
+    int hasDigits = 0;
 
+    // If there is a negative sign at the start
+    if (*str == '-') {
+        str++;
+    }
+
+    // Check each character in the string
+    while (*str) {
+        if (!isdigit(*str)) {
+            // If it's not a digit, it's invalid
+            return 0;
+        } else {
+            hasDigits = 1;
+        }
+        str++;
+    }
+
+    // Ensure there was at least one digit
+    return hasDigits;
 }
 
 /*******************************************************************************/
@@ -82,6 +100,21 @@ float slopeLine(const float x1, const float y1,
 /*                                                                             */
 
 int main(const int argc, const char* const argv[]) {
+
+  // Check if the number of arguments passed is correct
+  if (argc != EXPECTED_ARG_COUNT) {
+    printf("Expected %d inputs; received %d\n", 6, argc - 1);
+    return 0;
+  }
+
+  // Check that each argument is a valid integer
+    for (int i = 1; i <= 6; i++) {
+        if (!isValidInt(argv[i])) {
+            printf("Argument %d is not a valid integer\n", i);
+            return 0;
+        }
+    }
+
 
   /* Cartesian coordinates */
   

@@ -1,14 +1,14 @@
-Define the requirements needed by the program triangle.c
-for each requirement, there should be a test case
-Explain what the program should be doing, i.e. inputs and outputs of the program
-
-
-
-Fix the program triangle.c for any issues that can be found
-
-
-
-- slope of line
-- three on one point
-- isosceles triangle
-- equilateral triangle
+Requirements for the triangle program:
+1. The program accepts six command-line arguments representing the 
+   Cartesian coordinates of three points in the form 'x1 y1 x2 y2 x3 y3'.
+2. The program calculates the distance between each pair of points.
+3. The program uses the distance between each pair of points to calculate 
+   the area of the triangle formed by the 3 points using Herons formula.
+4. On completion the program outputs the coordinates of the three points and 
+   the area of the triangle formed by the three points.
+5. If the user provides fewer than six arguments, the program shall exit with 
+   an error message indicating the correct number of arguments is required.
+6. If the user provides more than six arguments, the program shall exit with 
+   an error message indicating the correct number of arguments is required.
+7. If the user provides non-integer number inputs, the program exits with an
+   error message indicating that integer inputs are required.
