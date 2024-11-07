@@ -15,12 +15,11 @@ Requirements for the triangle program:
 6. If the user provides a non-integer, non-floating point number argument,  
    the program exits with an error message indicating that integer or float 
    inputs are required, and outputs the position of the first invalid argument.
-
-
-
-
-
-
+7. The program checks if the three points are identical. If the points are the
+   same, the program outputs a message stating that the points form a point.
+8. The program checks if the three points form a line. If the three points form
+   a line, the program outputs a message stating that the points form a line
+   along with the slope of the line. A vertical line has an undefined slope.
 9. The program determines what kind of triangle the three points form. If the 
    points form a triangle with three equal side lengths, the program outputs that 
    the triangle is equilateral. If the points form a triangle with two equal side 

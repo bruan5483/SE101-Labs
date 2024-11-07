@@ -18,6 +18,7 @@
 #include <math.h>                     /* sqrt   */
 #include <stdlib.h>                   /* atof   */
 #include <ctype.h>                    /* isdigit */
+#include <stdbool.h>                  /* bool   */
 
 #define EXPECTED_ARG_COUNT 7          /* 6 plus the program name */
 
@@ -103,6 +104,27 @@ int isValidNumber(const char* str) {
     return hasDigits;
 }
 
+// Function to check if the three points are the same
+bool samePoint(const float x1, const float y1, const float x2, const float y2, const float x3, const float y3) {
+    if ((x1-x2<0.001 && x2-x1<0.001) && (x2-x3<0.001 && x3-x2<0.001) && (x1-x3<0.001 && x3-x1<0.001) && (y1-y2<0.001 && y2-y1<0.001) && (y2-y3<0.001 && y3-y2<0.001) && (y1-y3<0.001 && y3-y1<0.001)) {
+        printf("The three points form a single point\n");
+        return true;
+    }
+    return false;
+}
+
+// Function to check if the three points form a line
+bool formLine(const float x1, const float y1, const float x2, const float y2, float area) {
+  // if the area of the triangle is 0, the points form a line or a point, but we check for a point before the function call in main
+    if (area == 0) {
+        printf("The three points form a line\n");
+        if (x1-x2<0.001 && x2-x1<0.001) printf("The slope of the line is: undefined\n");
+        else printf("The slope of the line is: %.3f\n", (y2-y1)/(x2-x1));
+        return true;
+    }
+    return false;
+}
+
 // Function to check what kind of triangle is formed by the three points
 void triangleType(const float s1, const float s2, const float s3) {
     if ((s1-s2<0.001 && s2-s1<0.001) && (s2-s3<0.001 && s3-s2<0.001)) {
@@ -159,8 +181,14 @@ int main(const int argc, const char* const argv[]) {
   float s23 = distance(x2,y2,x3,y3);
   float s13 = distance(x1,y1,x3,y3);
 
+  // Check if the three points are the same
+  if (samePoint(x1, y1, x2, y2, x3, y3)) return 0;
+
   /* Compute area per problem description */
   float area = triangleArea(s12, s23, s13);
+
+  // Check if the three points form a line
+  if (formLine(x1, y1, x2, y2, area)) return 0;
 
   /* Output area */
   outputMessage(x1,y1,x2,y2,x3,y3,area);
