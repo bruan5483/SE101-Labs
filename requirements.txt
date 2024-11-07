@@ -15,3 +15,16 @@ Requirements for the triangle program:
 6. If the user provides a non-integer, non-floating point number argument,  
    the program exits with an error message indicating that integer or float 
    inputs are required, and outputs the position of the first invalid argument.
+
+
+
+
+
+
+9. The program determines what kind of triangle the three points form. If the 
+   points form a triangle with three equal side lengths, the program outputs that 
+   the triangle is equilateral. If the points form a triangle with two equal side 
+   lengths and a third unequal side, the program outputs that the triangle is 
+   isosceles. If the points form a triangle with three unequal side lengths, the 
+   program outputs that the triangle is scalene.
+

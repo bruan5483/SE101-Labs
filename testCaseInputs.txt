@@ -1,17 +1,23 @@
-1,1,1,1,2,2,2,.*The area of the triangle.*1.*
+1,1,1,1,2,2,2,.*The area of the triangle.*1.*\nThe triangle is isosceles*
 2,0,0,0,1,0,10,.*The area of the triangle.*0.*
-3,3,0,0,1,2,4,.*The area of the triangle.*5.5.*
-4,1,5,-2,2,5,-3,.*The area of the triangle.*18.*
+3,3,0,0,1,2,4,.*The area of the triangle.*5.5.*\nThe triangle is scalene*
+4,1,5,-2,2,5,-3,.*The area of the triangle.*18.*\nThe triangle is scalene*
 5,Expected 6 inputs; received 0
 6,0,1,2,4,Expected 6 inputs; received 4
 7,1,2,3,4,5,Expected 6 inputs; received 5
 8,1,2,3,4,5,6,7,Expected 6 inputs; received 7
 9,5,1,3,6,8,10,0,Expected 6 inputs; received 7
 10,1,0,0,1,1,1,0,2,Expected 6 inputs; received 8
-11,1.2,5.2,-2.3,1.0,9.1,4.5,.*The area of the triangle.*17.815.*
-12,0,0,-19.9,3.1,-10.2,1.1,.*The area of the triangle.*4.865.*
-13,95.2,77.6,-1.9,54.3,80,17.9,.*The area of the triangle.*2721.355.*
+11,1.2,5.2,-2.3,1.0,9.1,4.5,.*The area of the triangle.*17.815.*\nThe triangle is scalene*
+12,0,0,-19.9,3.1,-10.2,1.1,.*The area of the triangle.*4.865.*\nThe triangle is scalene*
+13,95.2,77.6,-1.9,54.3,80,17.9,.*The area of the triangle.*2721.355.*\nThe triangle is scalene*
 14,m,2,3,4,5,6,Argument 1 is not a valid integer or float
 15,0,4,5,true,1,5,Argument 4 is not a valid integer or float
 16,0,0,0,0,3.3.4,0,Argument 5 is not a valid integer or float
 17,3,*,q,w,e,9.1,Argument 2 is not a valid integer or float
+18,0,0,6,0,3,5.196,.*The area of the triangle.*15.588.*\nThe triangle is equilateral*
+19,11.5,44.3,-38.5,44.3,-13.5,0.999,.*The area of the triangle.*1082.525.*\nThe triangle is equilateral*
+20,1,1,5,1,3,20.22,.*The area of the triangle.*38.44.*\nThe triangle is isosceles*
+21,-3.46,2,-1,-1.73,1,1.73,.*The area of the triangle.*7.986.*\nThe triangle is isosceles*
+22,12.11,14.1,1,9.1,0,-1.7,.*The area of the triangle.*57.494.*\nThe triangle is scalene*
+23,1,2,0,-20,100,-74,.*The area of the triangle.*1127.*\nThe triangle is scalene*
