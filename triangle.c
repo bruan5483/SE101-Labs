@@ -164,9 +164,7 @@ int main(const int argc, const char* const argv[]) {
 
   /* Output area */
   outputMessage(x1,y1,x2,y2,x3,y3,area);
-
-  //printf("Lengths of the sides: %.3f, %.3f, %.3f\n", s12, s23, s13);
-
+  
   /* Output triangle type */
   triangleType(s12, s23, s13);
 
