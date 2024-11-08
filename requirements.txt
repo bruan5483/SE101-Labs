@@ -17,6 +17,8 @@ Requirements for the triangle program:
    inputs are required, and outputs the position of the first invalid argument.
    The program checks if the three points are identical. If the points are the
    same, the program outputs a message stating that the points form a point.
+7. The program checks if the three points are identical. If the points are the
+   same, the program outputs a message stating that the points form a point.
 8. The program checks if the three points form a line. If the three points form
    a line, the program outputs a message stating that the points form a line
    along with the slope of the line. A vertical line has an undefined slope.
