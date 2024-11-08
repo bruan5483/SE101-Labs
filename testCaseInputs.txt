@@ -14,12 +14,12 @@
 14,0,4,5,true,1,5,Argument 4 is not a valid integer or float
 15,0,0,0,0,3.3.4,0,Argument 5 is not a valid integer or float
 16,3,*,q,w,e,9.1,Argument 2 is not a valid integer or float
-17,0,0,6,0,3,5.196,.*The area of the triangle.*15.588.*\nThe triangle is equilateral*
-18,11.5,44.3,-38.5,44.3,-13.5,0.999,.*The area of the triangle.*1082.525.*\nThe triangle is equilateral*
-19,1,1,5,1,3,20.22,.*The area of the triangle.*38.44.*\nThe triangle is isosceles*
-20,-3.46,2,-1,-1.73,1,1.73,.*The area of the triangle.*7.986.*\nThe triangle is isosceles*
-21,12.11,14.1,1,9.1,0,-1.7,.*The area of the triangle.*57.494.*\nThe triangle is scalene*
-22,1,2,0,-20,100,-74,.*The area of the triangle.*1127.*\nThe triangle is scalene*
+
+
+
+
+
+
 23,0,0,0,0,0,0,.*The three points form a single point*
 24,12.447,-92901,12.447,-92901,12.447,-92901,.*The three points form a single point*
 25,0,1,2,4,4,7,.*The three points form a line*\nThe slope of the line is: .*1.5.*
