@@ -125,17 +125,6 @@ bool formLine(const float x1, const float y1, const float x2, const float y2, fl
     return false;
 }
 
-// Function to check what kind of triangle is formed by the three points
-void triangleType(const float s1, const float s2, const float s3) {
-    if ((s1-s2<0.001 && s2-s1<0.001) && (s2-s3<0.001 && s3-s2<0.001)) {
-        printf("The triangle is equilateral\n");
-    } else if ((s1-s2<0.001 && s2-s1<0.001) || (s2-s3<0.001 && s3-s2<0.001) || (s1-s3<0.001 && s3-s1<0.001)) {
-        printf("The triangle is isosceles\n");
-    } else {
-        printf("The triangle is scalene\n");
-    }
-}
-
 /*******************************************************************************/
 /*                                                                             */
 /* main()                                                                      */
@@ -192,11 +181,6 @@ int main(const int argc, const char* const argv[]) {
 
   /* Output area */
   outputMessage(x1,y1,x2,y2,x3,y3,area);
-
-  //printf("Lengths of the sides: %.3f, %.3f, %.3f\n", s12, s23, s13);
-
-  /* Output triangle type */
-  triangleType(s12, s23, s13);
 
   return 0;
 }
